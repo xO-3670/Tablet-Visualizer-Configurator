@@ -1,6 +1,6 @@
 module main
 
-go 1.20
+go 1.24
 
 require fyne.io/fyne/v2 v2.5.5
 
