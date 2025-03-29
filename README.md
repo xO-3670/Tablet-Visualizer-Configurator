@@ -8,7 +8,7 @@ A graphical configurator for **Tablet Visualizer**, built in Go and **Fyne** GUI
 
 
 # Installation
-#### 1. Download the latest release from [Releases](https://github.com/xO-3670/Tablet-Visualizer-Configurator/releases).  
+#### 1. Download the latest version from [Releases](https://github.com/xO-3670/Tablet-Visualizer-Configurator/releases).  
 #### 2. Move executable to **Tablet Visualizer** folder (same directory as `Settings.json` file)
 
 ## Screenshots
