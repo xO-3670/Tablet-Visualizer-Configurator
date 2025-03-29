@@ -252,6 +252,11 @@ func SetupAppLayout() {
 		TabletTransparencyLabel,
 		TabletTransparencyDataLabel)
 
+	SetupMainLayoutContainers()
+}
+
+// This is final layout that user see when they open program
+func SetupMainLayoutContainers() {
 	Labels = container.New(layout.NewVBoxLayout(),
 		Effect1Label,
 		Effect2Label,
