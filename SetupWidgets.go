@@ -11,8 +11,18 @@ import (
 )
 
 func SetupWidgets() {
-	// labels
+	SetupLaybels()
 
+	SetupCheckboxes()
+
+	SetupEntries()
+
+	SetupSliders()
+
+	SetupButtons()
+}
+
+func SetupLaybels() {
 	Effect1Label = widget.NewLabel("Trail circles fading effect")
 	Effect2Label = widget.NewLabel("Trail circles spacing out effect")
 	CustomTabletLabel = widget.NewLabel("Custom tablet")
@@ -28,20 +38,16 @@ func SetupWidgets() {
 	TrailCirclesLifetimeLabel = widget.NewLabel("Trail circles lifetime")
 	CursorTrailDensityLabel = widget.NewLabel("Trail circles density")
 	TabletTransparencyLabel = widget.NewLabel("Tablet image transparency")
+}
 
-	// labels!
-
-	// checks
-
+func SetupCheckboxes() {
 	Effect1Check = widget.NewCheck("", func(b bool) {})
 	Effect2Check = widget.NewCheck("", func(b bool) {})
 	CustomTabletCheck = widget.NewCheck("", func(b bool) {})
 	EnableErrorsCheck = widget.NewCheck("", func(b bool) {})
+}
 
-	// checks!
-
-	// entries
-
+func SetupEntries() {
 	TabletAreaX = widget.NewEntry()
 	TabletAreaY = widget.NewEntry()
 	TabletAreaW = widget.NewEntry()
@@ -72,10 +78,9 @@ func SetupWidgets() {
 	CustomTabletImageOffsetY.SetPlaceHolder("0")
 
 	ValidateEntries()
-	// entries!
+}
 
-	// sliders
-
+func SetupSliders() {
 	CursorSize = widget.NewSlider(0.01, 5.00)
 	CursorSize.Step = 0.01
 	CursorSizeVal = binding.NewString()
@@ -112,15 +117,12 @@ func SetupWidgets() {
 	TabletTransparencyVal.Set(strconv.FormatUint(uint64(TabletTransparency.Value), 10))
 	TabletTransparencyDataLabel = widget.NewLabelWithData(TabletTransparencyVal)
 
-	// sliders!
+}
 
-	// buttons
-
+func SetupButtons() {
 	SaveConfig = widget.NewButton("Save config", func() {
 		SaveUserConfigToJSON()
 	})
-
-	// buttons!
 }
 
 func ValidateEntries() {
